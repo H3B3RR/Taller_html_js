@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index H3B3R</title>
+    <style>
+        body {
+            background-image: url('img/fondo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #EFF0EA;
+            font-family: Arial, sans-serif;
+        }
+        .welcome-message {
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            color: #FCB3A4;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .color-sample {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .color1 { background-color: #EFF0EA; color: #000; }
+        .color3 { background-color: #B4CABD; color: #000; }
+        .color4 { background-color: #FFEAD7; color: #000; }
+        .color5 { background-color: #ECC8B2; color: #000; }
+        .color6 { background-color: #FCB3A4; color: #000; }
+        .no-press-button {
+            display: block;
+            width: 200px;
+            height: 100px;
+            margin: 50px auto;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .fullscreen-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            background-image: url('img/scream.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 1000;
+        }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20px auto;
+            color: #EFF0EA;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FCB3A4;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">Hola, este es mi menú</div>
+    <div class="welcome-message">by H3B3R</div>
+
+    <div class="color-sample color1">Color 1: #EFF0EA</div>
+    <div class="color-sample color3">Color 3: #B4CABD</div>
+    <div class="color-sample color4">Color 4: #FFEAD7</div>
+    <div class="color-sample color5">Color 5: #ECC8B2</div>
+    <div class="color-sample color6">Color 6: #FCB3A4</div>
+
+    <button class="no-press-button" onclick="showFullscreenImage()">NO PRESIONAR</button>
+
+    <div class="fullscreen-image" id="fullscreenImage"></div>
+
+    <div class="form-container">
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function showFullscreenImage() {
+            document.getElementById('fullscreenImage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

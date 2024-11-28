@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Multimedia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .media {
+            margin-bottom: 20px;
+        }
+        .media h2 {
+            color: #2c3e50;
+        }
+        .media p {
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Multimedia en HTML</h1>
+
+    <div class="media">
+        <h2>Imagen</h2>
+        <p>Usa el elemento <code>&lt;img&gt;</code> para insertar una imagen.</p>
+        <img src="img/ejemplo.jpg" alt="Ejemplo de imagen" width="300">
+    </div>
+
+    <div class="media">
+        <h2>Audio</h2>
+        <p>Usa el elemento <code>&lt;audio&gt;</code> para insertar un archivo de audio.</p>
+        <audio controls>
+            <source src="audio/ejemplo.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <div class="media">
+        <h2>Video</h2>
+        <p>Usa el elemento <code>&lt;video&gt;</code> para insertar un archivo de video.</p>
+        <video width="320" height="240" controls>
+            <source src="video/ejemplo.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+
+    <div class="media">
+        <h2>Iframe</h2>
+        <p>Usa el elemento <code>&lt;iframe&gt;</code> para insertar contenido de otra fuente, como un video de YouTube.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=xvFZjo5PgG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="media">
+        <h2>SVG</h2>
+        <p>Usa el elemento <code>&lt;svg&gt;</code> para insertar gráficos vectoriales escalables.</p>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+    </div>
+
+    <div class="media">
+        <h2>Canvas</h2>
+        <p>Usa el elemento <code>&lt;canvas&gt;</code> para dibujar gráficos mediante scripts (normalmente JavaScript).</p>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+        <script>
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+            context.fillStyle = '#FF0000';
+            context.fillRect(10, 10, 150, 75);
+        </script>
+    </div>
+
+</body>
+</html>
